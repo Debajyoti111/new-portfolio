@@ -1,13 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Lora:ital,wght@0,400;1,400;1,600;1,700&family=Satisfy&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
+  font-family: "IBM Plex Serif", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    -45deg,
+    hsl(230, 45%, 21%),
+    hsl(230, 20%, 9%),
+    hsl(230, 40%, 12%),
+    hsl(230, 45%, 21%)
+  );
+  height: 100vh;
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  overflow-x: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
