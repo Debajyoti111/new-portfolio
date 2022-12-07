@@ -4,7 +4,7 @@ import "animate.css/animate.min.css";
 const SkillsTab = ({ style, image, tooltip, delay }) => {
   return (
     <ScrollAnimation
-      delay={delay * 100}
+      delay={delay * 220}
       offset={0}
       animateIn="animate__animated animate__bounceInRight"
       animateOut="animate__animated animate__bounceOutLeft"
