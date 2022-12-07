@@ -1,8 +1,14 @@
 import Intro from "./components/Intro";
+import Skills from "./components/Skills";
+import style from "./styles/app.module.scss";
+
 function App() {
   return (
     <>
-      <Intro></Intro>
+      <div className={style.container}>
+        <Intro></Intro>
+        <Skills />
+      </div>
     </>
   );
 }

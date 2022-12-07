@@ -1,0 +1,111 @@
+.skillsContainer {
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+  h1 {
+    letter-spacing: 10px;
+    color: hsl(230, 100%, 95%);
+    animation: lights 5s 750ms linear infinite;
+  }
+  @keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+    30% {
+      color: hsl(230, 80%, 90%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    40% {
+      color: hsl(230, 100%, 95%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+  }
+  .tabContainer {
+    position: relative;
+    top: 25px;
+    right: 20%;
+    display: grid;
+    column-gap: 100px;
+    row-gap: 25px;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .skillsTab {
+    display: inline;
+    transform: scale(1);
+    transition: 1s;
+  }
+  .skillsTab:hover {
+    transform: scale(1.1);
+  }
+  .skillsTab::before {
+    transform: scale(1);
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    right: 20%;
+  }
+
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    width: 120px;
+    background-color: rgb(3, 0, 37);
+    color: rgb(221, 255, 0);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: "Lora";
+    top: 10px;
+    left: 80%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(3, 0, 37) transparent transparent;
+  }
+}
