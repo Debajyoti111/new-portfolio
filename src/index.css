@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Lora:ital,wght@0,400;1,400;1,600;1,700&family=Satisfy&display=swap");
+:root {
+  --color-cursor: 220, 90, 90;
+  --cursor-outline-shade: 0.3;
+  --cursor-size: 10px;
+  --cursor-outline-size: 12px;
+}
 body {
   margin: 0;
 
@@ -12,12 +18,23 @@ body {
     hsl(230, 40%, 12%),
     hsl(230, 45%, 21%)
   );
+  cursor: none;
   height: 150vh;
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  /* background: #2c9ec1; */
+  background: #252525;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#402cc161, #88e3ff, #402cc161);
+  border-radius: 8px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -32,4 +49,27 @@ code {
   100% {
     background-position: 0% 50%;
   }
+}
+#cursor-dot {
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  background-color: rgba(var(--color-cursor), 1);
+}
+
+#cursor-dot-outline {
+  width: var(--cursor-outline-size);
+  height: var(--cursor-outline-size);
+  background-color: rgba(var(--color-cursor), var(--cursor-outline-shade));
+}
+#cursor-dot,
+#cursor-dot-outline {
+  z-index: 999;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
