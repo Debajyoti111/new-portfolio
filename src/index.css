@@ -12,7 +12,7 @@ body {
     hsl(230, 40%, 12%),
     hsl(230, 45%, 21%)
   );
-  height: 100vh;
+  height: 150vh;
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   overflow-x: hidden;

@@ -1,0 +1,145 @@
+.contactContainer {
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+  h1 {
+    letter-spacing: 10px;
+    color: hsl(230, 100%, 95%);
+    animation: lights 5s 750ms linear infinite;
+  }
+  @keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+    30% {
+      color: hsl(230, 80%, 90%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    40% {
+      color: hsl(230, 100%, 95%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+  }
+  .smallText {
+    font-family: "IBM Plex Serif", serif;
+    font-style: normal;
+    color: hsla(228, 100%, 95%, 0.56);
+  }
+  .contactFormAndMapContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  .contactFormContainer {
+    box-shadow: 0 0 20px 5px #48abe049;
+    margin-right: 5%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      45deg,
+      #2395bf20,
+      #0d5b7730 40%,
+      #00496130 3%,
+      #00496151
+    );
+    border-radius: 10px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transform: scale(1);
+    transition: 0.5s;
+    .submitButton {
+      color: hsl(230, 100%, 95%);
+      animation: lights 5s 750ms linear infinite;
+      transition: 0.7s;
+      height: 40px;
+      margin-bottom: 0;
+      margin-top: 3%;
+      font-size: 18px;
+      border-width: 1px;
+      border-radius: 5px;
+    }
+    .submitButton:hover {
+      background-color: rgb(13, 4, 32);
+    }
+    .submitButton::before {
+      background-color: transparent;
+    }
+  }
+  .contactFormContainer:hover {
+    transform: scale(1.02);
+  }
+  .contactFormContainer::before {
+    transform: scale(1);
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 20px 5px #48abe049;
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 20px 0 20px 0 #48abe049;
+    }
+    100% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 20px 5px #48abe049;
+    }
+  }
+  input {
+    color: white;
+    font-family: "Lora", serif;
+    background-color: transparent;
+    margin-bottom: 2%;
+    width: 70%;
+    height: 30px;
+    font-size: 16px;
+    border-width: 0 0 1px 0;
+  }
+
+  input::placeholder {
+    color: hsla(226, 100%, 95%, 0.716);
+  }
+  textarea {
+    background-color: transparent;
+    font-family: "Lora", serif;
+    color: white;
+    border-width: 0 0 1px 0;
+    font-size: 16px;
+  }
+  textarea::placeholder {
+    color: hsla(226, 100%, 95%, 0.716);
+    width: 70%;
+  }
+}
