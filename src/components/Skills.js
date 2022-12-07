@@ -76,6 +76,7 @@ const Skills = () => {
       <ScrollAnimation
         animateIn="animate__animated animate__bounceInRight"
         animateOut="animate__animated animate__bounceOutLeft"
+        offset={50}
       >
         <h1>SKILLS</h1>
       </ScrollAnimation>
