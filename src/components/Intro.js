@@ -5,7 +5,7 @@ function Intro() {
   return (
     <div className={style.introContainer}>
       <div className={style.imageContainer}>
-        <img src={ProfilePic} alt="my-image" width={200} height={200} />
+        <img src={ProfilePic} alt="my-image" className={style.imageContainer} />
       </div>
       <div className={style.infoContainer}>
         <span>Hi, I am</span>

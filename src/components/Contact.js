@@ -50,7 +50,7 @@ const Contact = () => {
       <ScrollAnimation
         animateIn="animate__animated animate__bounceInRight"
         animateOut="animate__animated animate__bounceOutLeft"
-        offset={200}
+        offset={50}
       >
         <h1>Contact Me</h1>
         <span className={style.smallText}>
@@ -61,7 +61,7 @@ const Contact = () => {
       </ScrollAnimation>
       <div className={style.contactFormAndMapContainer}>
         <ScrollAnimation
-          offset={200}
+          offset={10}
           animateIn=" animate__animated animate__flipInY"
           animateOut=" animate__animated animate__flipOutY"
         >
