@@ -24,6 +24,15 @@ function Intro() {
             </div>
           </p>
         </p>
+        <a href="/resume2021.pdf" download="resume_2021">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="box-container">
+            <h3>Download My Resume</h3>
+          </div>
+        </a>
       </div>
       <div className={style.containerChevron}>
         <div className={style.chevron}></div>
