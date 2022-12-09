@@ -4,6 +4,8 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import Github from "../assets/github.png";
+import Linkedin from "../assets/linkedin.png";
 const Contact = () => {
   const swal = Swal;
   const sendEmail = (e) => {
@@ -95,6 +97,17 @@ const Contact = () => {
         </ScrollAnimation>
 
         {/* <div className={style.map}>This is where Map will go</div> */}
+      </div>
+      <div className={style.footer}>
+        <a href="https://github.com/Debajyoti111" target="_blank">
+          <img src={Github} alt="Github" width={50}></img>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/debajyoti-dhar-17a81021a/"
+          target="_blank"
+        >
+          <img src={Linkedin} alt="Linkedin" width={32}></img>
+        </a>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ body {
     hsl(230, 45%, 21%)
   );
   cursor: none;
-  height: 150vh;
+  height: 200vh;
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   overflow-x: hidden;
