@@ -87,8 +87,8 @@
     padding: 5px 0;
     border-radius: 6px;
     font-family: "Lora";
-    top: 10px;
-    left: 80%;
+    top: 80%;
+    left: -20%;
     position: absolute;
     z-index: 1;
   }
@@ -101,11 +101,62 @@
   .tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
-    top: 50%;
-    right: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
+    bottom: 100%; /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent rgb(3, 0, 37) transparent transparent;
+    border-color: transparent transparent rgb(3, 0, 37) transparent;
+  }
+}
+
+@media only screen and (max-width: 1007px) and (min-width: 641px) {
+  .skillsContainer {
+    h1 {
+      font-size: 1.85rem;
+    }
+    .tabContainer {
+      grid-template-columns: 33% 33% 33%;
+      margin-left: 10%;
+    }
+    .skillsTab {
+      transform: scale(0.92);
+    }
+    .skillsTab::before {
+      transform: scale(0.92);
+    }
+    .skillsTab:hover {
+      transform: scale(1);
+    }
+    .tooltip .tooltiptext {
+      width: 100px;
+      font-size: 0.9rem;
+      left: -9%;
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  .skillsContainer {
+    h1 {
+      font-size: 1.7rem;
+    }
+    .tabContainer {
+      grid-template-columns: 50% 50%;
+      margin-left: 20%;
+    }
+    .skillsTab {
+      transform: scale(0.85);
+    }
+    .skillsTab::before {
+      transform: scale(0.85);
+    }
+    .skillsTab:hover {
+      transform: scale(0.92);
+    }
+    .tooltip .tooltiptext {
+      width: 90px;
+      font-size: 0.8rem;
+      left: -5%;
+    }
   }
 }
