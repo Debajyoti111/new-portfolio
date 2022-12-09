@@ -5,6 +5,14 @@
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 5%;
+  }
   h1 {
     letter-spacing: 10px;
     color: hsl(230, 100%, 95%);
